@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS Flex Layout2</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			html {
+				font-family: Verdana, Geneva, Tahoma, sans-serif;
+			}
+			body {
+				margin: auto;
+				max-width: 1200px;
+			}
+
+			header {
+				background: #96a0edaa;
+				height: 10vh;
+				display: flex;
+				justify-content: flex-end;
+				align-items: flex-end;
+			}
+
+			.navigation {
+				display: flex;
+				/* flex-flow: row wrap; */
+				/* justify-content: flex-end; */
+				list-style: none;
+				margin: 0;
+				background: rgba(0, 191, 255, 0.464);
+			}
+			.navigation a {
+				text-decoration: none;
+				display: block;
+				padding: 0.5em;
+				color: white;
+			}
+			.navigation a:hover {
+				background: #1565c0;
+			}
+
+			main {
+				background-color: #02bfff;
+				background-image: url(http://picsum.photos/id/1015/1200);
+				height: 80vh;
+				display: flex;
+			}
+			main > * {
+				flex: 1;
+			}
+			.main-center {
+				flex-grow: 4;
+				text-align: center;
+				display: flex;
+				flex-flow: column;
+				justify-content: center;
+				color: gold;
+			}
+			.main-left,
+			.main-right {
+				background-color: #d3abef99;
+			}
+			footer {
+				background-color: #96a0edaa;
+				height: 10vh;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<ul class="navigation">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Products</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</header>
+		<main>
+			<div class="main-left"></div>
+			<div class="main-center">
+				<h1>Title</h1>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nobis voluptate ipsa tempora? Esse totam vel, sed temporibus qui ipsum!</p>
+			</div>
+			<div class="main-right">Right</div>
+		</main>
+		<footer>Footer</footer>
+	</body>
+</html>

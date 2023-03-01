@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS Flex Layout1</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			html {
+				font-family: Verdana, Geneva, Tahoma, sans-serif;
+			}
+			header {
+				background-color: #ff6347;
+				height: 10vh;
+			}
+			main {
+				background-color: #02bfff;
+				height: 80vh;
+				display: flex;
+			}
+			main > * {
+				outline: 1px dashed lime;
+				flex: 1;
+			}
+      .main-center {
+        flex-grow: 4;
+        text-align: center;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+      }
+			footer {
+				background-color: #90ee8f;
+				height: 10vh;
+			}
+		</style>
+	</head>
+	<body>
+		<header>Header</header>
+		<main>
+			<div class="main-left">Left</div>
+			<div class="main-center">
+        <h1>Titlle</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum doloremque deserunt corrupti maiores delectus cupiditate voluptatibus, ullam ratione velit adipisci quisquam voluptas nostrum laboriosam dolore aliquid tempore molestiae, soluta dicta!</p>
+      </div>
+			<div class="main-right">Right</div>
+		</main>
+		<footer>Footer</footer>
+	</body>
+</html>

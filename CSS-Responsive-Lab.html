@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>CSS Responsive Lab</title>
+		<style>
+			* { margin: 0; padding: 0; box-sizing: border-box; }
+			html { font-family: Verdana, Geneva, Tahoma, sans-serif; }
+			body { margin: auto; max-width: 1200px; }
+			header {
+				background: rgba(91, 91, 199,0.8);
+				height: 10vh;
+				display: flex;
+				/* justify-content: center; */
+				justify-content: flex-end;
+				align-items: flex-end;
+			}
+
+			.navigation {
+				/* width: 100%; */
+				display: flex;
+				/* justify-content: space-around; */
+				list-style: none;
+				margin: 0;
+				background: rgba(0, 191, 255, 0.464);
+			}
+			.navigation a {
+				text-decoration: none;
+				display: block;
+				padding: 0.5em;
+				color: white;
+			}
+			.navigation a:hover {
+				background: #1565c0;
+			}
+
+			main {
+				background-color: #02bfff;
+				background-image: url(http://picsum.photos/id/1015/1200);
+				height: 80vh;
+				display: flex;
+				flex-wrap: wrap;
+			}
+			main > * {
+				flex: 1;
+			}
+			.main-c {
+				flex: 4 500px;
+				text-align: center;
+				display: flex;
+				flex-flow: column;
+				justify-content: flex-start;
+			}
+			.main-l,
+			.main-r {
+				background-color: rgba(238, 130, 238, 0.527);
+				flex-basis: 100px
+				;
+			}
+
+			footer {
+				background-color: rgba(91, 91, 199,0.8);
+				height: 10vh;
+			}
+
+			@media (max-width: 700px) {
+				header {
+					justify-content: center;
+				}
+				.navigation {
+					width: 100%;
+					justify-content: space-around;
+				}
+			}
+			@media (max-width: 600px) {
+				header {
+					height: auto;
+					text-align: center;
+				}
+				.navigation {
+					flex-flow: column;
+				}
+				.navigation li {
+					border-bottom: 1px solid gray;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<ul class="navigation">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Products</a></li>
+				<li><a href="#">Contact</a></li>
+			</ul>
+		</header>
+		<main>
+			<div class="main-l">
+				<h2>News</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati, tempore.</p>
+			</div>
+
+			<div class="main-c">
+				<h1>Title</h1>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae nobis voluptate ipsa tempora? Esse totam vel, sed temporibus qui ipsum!</p>
+				<div style="margin: 60px 20px 0 60px">
+					<h3 style="text-align: left">Title</h3>
+					<p style="text-align: left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus possimus dignissimos adipisci tenetur, distinctio ut saepe id enim praesentium delectus.</p>
+				</div>
+			</div>
+
+			<div class="main-r">
+				<h3>Ads</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus porro commodi ipsum odio praesentium nemo sunt animi necessitatibus sit ad.</p>
+			</div>
+		</main>
+		<footer>Footer</footer>
+	</body>
+</html>

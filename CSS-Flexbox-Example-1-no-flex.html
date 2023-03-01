@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSS Flexbox Example1</title>
+  <style>
+    /* *{margin: 0; padding: 0; box-sizing: border-box;} */
+    *{margin: 0; padding: 0;}
+    .container {
+      position: absolute;
+      outline: 2px solid limegreen;
+      /* height: 100px; */
+      height: 15%;
+      width: 90%;
+      margin: 5px 5px 5px;
+    }
+    .box {
+      position: absolute;
+      /* width: 100px; */
+      width: 15%;
+      /* height: 100px; */
+      height: 100%;
+      border: 2px dashed red;
+      display: inline-block;
+    }
+    .logo {
+      /* margin-right: 26.5vw; */
+      left:1em;
+    }
+    .title {
+      /* margin-right: 26vw; */
+      /* top: 50%; */
+      left: 50%;
+      transform: translate(-50%, 0);
+    }
+    .link {
+      right:1em ;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="box logo">Logo</div>
+    <div class="box title">Title</div>
+    <div class="box link">Link</div>
+  </div>
+</body>
+</html>
